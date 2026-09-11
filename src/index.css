@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, .font-serif-gold {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-garamond {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+/* Brand Palette Color Utility Classes from Uploaded Logo */
+/* Primary: Creme Marfim Canvas */
+.bg-cream-canvas {
+  background-color: #FAF7F2;
+}
+
+.bg-cream-surface {
+  background-color: #F3ECE0;
+}
+
+/* Secondary: Dourado Amarelado Nobre */
+.bg-gold-nobel {
+  background-color: #D49B28;
+}
+
+.text-gold-nobel {
+  color: #D49B28;
+}
+
+.border-gold-nobel {
+  border-color: #D49B28;
+}
+
+/* Tertiary: Cinza Grafite (Small Details) */
+.bg-graphite {
+  background-color: #1F242D;
+}
+
+.text-graphite {
+  color: #1F242D;
+}
+
+.border-graphite {
+  border-color: #2D3442;
+}
+
+/* Gold Gradient utilities based on uploaded logo (#D49B28) */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #FDE69E 0%, #D49B28 50%, #996B12 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-text-gradient-dark {
+  background: linear-gradient(135deg, #B57A16 0%, #D49B28 60%, #8A5A0A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(135deg, rgba(212, 155, 40, 0.8), rgba(229, 168, 50, 0.3), rgba(181, 123, 24, 0.8)) 1;
+}
+
+.gold-btn-gradient {
+  background: linear-gradient(135deg, #E8AC33 0%, #D49B28 50%, #B57B18 100%);
+  color: #1F242D;
+  box-shadow: 0 4px 20px rgba(212, 155, 40, 0.28);
+}
+
+.gold-btn-gradient:hover {
+  background: linear-gradient(135deg, #F5BB42 0%, #E8AC33 50%, #C88C22 100%);
+  box-shadow: 0 6px 28px rgba(212, 155, 40, 0.42);
+}
+
+/* Light Mode Cream Card */
+.cream-card {
+  background-color: #FFFFFF;
+  border: 1px solid #EADBCC;
+  box-shadow: 0 10px 30px -5px rgba(212, 155, 40, 0.08);
+}
+
+.cream-card-hover:hover {
+  border-color: #D49B28;
+  box-shadow: 0 14px 36px -5px rgba(212, 155, 40, 0.18);
+}
+
+/* Shimmer animation for premium CTA buttons */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 2.8s infinite;
+}
+
+/* Custom Gold Glow Pulse */
+@keyframes goldPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(212, 155, 40, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(212, 155, 40, 0.5);
+  }
+}
+
+.glow-gold {
+  animation: goldPulse 3.5s infinite ease-in-out;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0F141C;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2216;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 155, 40, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D49B28;
+}
+
